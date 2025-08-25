@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0A0A0A;
+  --fg: #FFFFFF;
+  --muted: #f1f1f1; /* brighter: gray-300 */
+  --card: #111111;
+  --border: #1F1F1F;
+  --accent: #FACC15; /* yellow-400 */
+}
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+  a { @apply text-accent underline-offset-4 hover:underline; }
+}
